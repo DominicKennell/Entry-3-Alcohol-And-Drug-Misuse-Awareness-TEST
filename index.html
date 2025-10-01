@@ -1,0 +1,544 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>E3 Alcohol And Drug Misuse Awareness</title>
+<style>
+:root{--bg:#f7fafc;--card:#ffffff;--muted:#6b7280;--accent:#2563eb;--green:#10b981;--red:#ef4444}
+body{font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; background:var(--bg); margin:0; padding:24px; color:#111827}
+.container{max-width:980px;margin:0 auto}
+.card{background:var(--card);border-radius:12px;padding:18px;box-shadow:0 6px 18px rgba(15,23,42,0.06);margin-bottom:18px}
+h1{font-size:20px;margin:0 0 8px}
+p.lead{color:var(--muted);margin:0 0 12px}
+label{display:block;font-weight:600;margin-bottom:6px}
+.muted{color:var(--muted);font-size:13px}
+button{background:var(--accent);color:white;border:0;padding:10px 16px;border-radius:8px;cursor:pointer;margin:10px 5px 0 0}
+
+/* General Input Styles */
+input[type=text], select{width:100%;padding:10px;border-radius:8px;border:1px solid #e6e9ee; box-sizing:border-box;}
+.input-group{margin-bottom:10px;}
+
+/* MCQ & True/False/Checkbox Styles */
+.mcq .option, .true-false-options .option{padding:10px;border-radius:8px;border:1px solid #e6e9ee;margin-bottom:8px;cursor:pointer; display:flex; align-items:center; gap:10px;}
+.mcq .option.selected, .true-false-options .option.selected{background:#eef2ff;border-color:#c7d2fe}
+.checkbox-options .option.selected{background:#d1fae5; border-color:var(--green);}
+.checkbox-options .option input[type=checkbox]{margin:0; width:18px; height:18px;}
+
+/* Drag & Drop Styles */
+.drag-area{display:flex;gap:12px;align-items:flex-start}
+.draggable{padding:8px 10px;border-radius:8px;border:1px dashed #cbd5e1;background:#fff;cursor:grab}
+.drop-targets{display:grid;grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));gap:12px;margin-top:12px;}
+.dropzone{min-height:80px;padding:8px;border-radius:8px;border:2px dashed #e6e9ee;background:#fafafa;flex:1}
+.dropzone h4{margin:0 0 6px;color:#111827;font-size:14px;}
+.dropzone.filled{border-color:var(--accent);}
+
+/* Interactive Fill-in-the-Blanks (Enhanced) */
+.fib-sentence{display:flex; flex-wrap:wrap; gap:5px; align-items:center; line-height:2.0; margin-bottom: 10px;}
+.fib-blank{padding:3px 0; border-bottom:2px solid var(--accent); width:150px; text-align:center; color:#111827; font-weight:600; background:#f0f4ff; border-radius: 2px;}
+
+footer{margin-top:20px;text-align:center}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="card">
+    <h1>Entry 3 Alcohol And Drug Misuse Awareness</h1>
+    <p class="lead">Complete the activities below. Click “Save as PDF” or “Send via Email” when finished.</p>
+    <label for="studentName">Student Name:</label>
+    <input id="studentName" type="text" placeholder="Enter your name" data-field="student-name">
+  </div>
+
+    <section class="card" id="q1">
+    <h2>1) Match Drug Type to its Primary Effect Class (Drag & Drop)</h2>
+    <p class="muted">Drag each drug type to the primary effect it causes.</p>
+    
+    <div id="draggables" class="drag-area" style="min-width:100%; display:flex;gap:8px;flex-wrap:wrap;min-height:50px;border:1px solid #e6e9ee;padding:10px;border-radius:8px;margin-bottom:15px;">
+        </div>
+    
+    <div class="drop-targets">
+        <div class="dropzone" data-effect-key="effect-stimulant">
+            <h4>Stimulant (Uppers)</h4>
+        </div>
+        <div class="dropzone" data-effect-key="effect-depressant">
+            <h4>Depressant (Downers)</h4>
+        </div>
+        <div class="dropzone" data-effect-key="effect-hallucinogen">
+            <h4>Hallucinogen (Psychedelics)</h4>
+        </div>
+    </div>
+  </section>
+
+    <section class="card" id="q2-fib">
+    <h2>2) Key Concepts in Misuse (Interactive Fill-in-the-Blanks)</h2>
+    <p class="muted">Click on the blank spaces and type the correct word or phrase to complete the sentence.</p>
+    <div class="fib-sentence">
+      The need for increasing amounts of a substance to achieve the same effect is called:
+      <span class="fib-blank" data-field="fib-1-blank-1" contenteditable="true"></span>.
+    </div>
+    <div class="fib-sentence">
+      A physical and psychological need for a substance is known as:
+      <span class="fib-blank" data-field="fib-2-blank-1" contenteditable="true"></span>.
+    </div>
+  </section>
+
+    <section class="card" id="q3">
+    <h2>3) Reasons for misuse (Multiple Choice)</h2>
+    <p class="muted">Select the primary reason why individuals may misuse drugs or alcohol.</p>
+    <div class="mcq" data-question="mcq-1">
+      <div class="option" data-value="Peer pressure">Peer pressure</div>
+      <div class="option" data-value="Curiosity">Curiosity</div>
+      <div class="option" data-value="Stress relief">Stress relief</div>
+      <div class="option" data-value="All of the above">All of the above</div>
+    </div>
+  </section>
+
+    <section class="card" id="q4-units">
+    <h2>4) Understanding Alcohol Units</h2>
+    <p class="muted">Enter the approximate number of UK alcohol units for these standard servings.</p>
+    <div class="fib-sentence">
+      A single pub measure (25ml) of spirits (40% ABV) contains about:
+      <span class="fib-blank" data-field="fib-3-blank-1" contenteditable="true"></span> units.
+    </div>
+    <div class="fib-sentence">
+      A standard glass (175ml) of wine (13% ABV) contains about:
+      <span class="fib-blank" data-field="fib-4-blank-1" contenteditable="true"></span> units.
+    </div>
+    <div class="fib-sentence">
+      A pint (568ml) of standard beer (4% ABV) contains about:
+      <span class="fib-blank" data-field="fib-5-blank-1" contenteditable="true"></span> units.
+    </div>
+  </section>
+  
+    <section class="card" id="q5">
+    <h2>5) Effects of drug misuse (Select the Correct One)</h2>
+    <p class="muted">Select the single correct effect often associated with drug misuse.</p>
+    <div class="mcq" data-question="mcq-2">
+      <div class="option" data-value="Improved coordination">Improved coordination</div>
+      <div class="option" data-value="Increased risk of accidental injury">Increased risk of accidental injury</div>
+      <div class="option" data-value="Better sleep quality">Better sleep quality</div>
+      <div class="option" data-value="Enhanced long-term memory">Enhanced long-term memory</div>
+    </div>
+  </section>
+
+    <section class="card" id="q6-cb">
+    <h2>6) Identify Risk Factors (Select All That Apply)</h2>
+    <p class="muted">Select all of the following that are recognised **Environmental** risk factors for substance misuse.</p>
+    <div class="checkbox-options" data-question="cb-2">
+      <div class="option" data-value="Peer pressure">
+        <input type="checkbox" data-option-value="Peer pressure">
+        Peer pressure from friends
+      </div>
+      <div class="option" data-value="Genetic Predisposition">
+        <input type="checkbox" data-option-value="Genetic Predisposition">
+        Genetic Predisposition (Family History)
+      </div>
+      <div class="option" data-value="Accessibility">
+        <input type="checkbox" data-option-value="Accessibility">
+        Easy accessibility to substances
+      </div>
+      <div class="option" data-value="Low self-esteem">
+        <input type="checkbox" data-option-value="Low self-esteem">
+        Low self-esteem
+      </div>
+    </div>
+  </section>
+  
+    <section class="card" id="q7-tf">
+    <h2>7) Health impacts: True or False</h2>
+    <p class="muted">Statement: Drug misuse is commonly associated with mental health disorders.</p>
+    <div class="true-false-options" data-question="tf-1">
+      <div class="option" data-value="True">True</div>
+      <div class="option" data-value="False">False</div>
+    </div>
+  </section>
+
+    <section class="card" id="q8-dd">
+    <h2>8) Withdrawal symptoms: Select the correct term</h2>
+    <p class="muted">Which is a common withdrawal symptom from alcohol?</p>
+    <div class="input-group">
+      <label for="dd-1">Select the correct symptom:</label>
+      <select id="dd-1" data-field="dd-1">
+        <option value="">--- Select an option ---</option>
+        <option value="Improved appetite">Improved appetite</option>
+        <option value="Anxiety">Anxiety</option>
+        <option value="Increased energy">Increased energy</option>
+        <option value="Better sleep">Better sleep</option>
+      </select>
+    </div>
+  </section>
+
+    <section class="card" id="q9-cb">
+    <h2>9) Support agencies: Select all that apply</h2>
+    <p class="muted">Which organizations provide support for alcohol misuse?</p>
+    <div class="checkbox-options" data-question="cb-1">
+      <div class="option" data-value="Alcoholics Anonymous">
+        <input type="checkbox" data-option-value="Alcoholics Anonymous">
+        Alcoholics Anonymous
+      </div>
+      <div class="option" data-value="NHS">
+        <input type="checkbox" data-option-value="NHS">
+        NHS
+      </div>
+      <div class="option" data-value="Samaritans">
+        <input type="checkbox" data-option-value="Samaritans">
+        Samaritans
+      </div>
+      <div class="option" data-value="Local Police Department">
+        <input type="checkbox" data-option-value="Local Police Department">
+        Local Police Department
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <button id="pdfBtn">Save as PDF</button>
+    <button id="emailBtn">Send via Email</button>
+  </footer>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script>
+const STORAGE_KEY='h5p_laser_activity_v1';
+function readStorage(){try{return JSON.parse(localStorage.getItem(STORAGE_KEY)||'{}');}catch(e){return {};}}
+function writeStorage(obj){localStorage.setItem(STORAGE_KEY,JSON.stringify(obj));}
+
+// Helper to get all options for a given question type selector
+function getOptions(selector) {
+    const element = document.querySelector(selector);
+    if (!element) return [];
+    return Array.from(element.querySelectorAll('.option')).map(opt => opt.dataset.value);
+}
+
+// Store the list of all dropzone keys and drug names for Q1
+const DROPZONE_KEYS = ['effect-stimulant', 'effect-depressant', 'effect-hallucinogen'];
+const DRUG_ITEMS = ['Cocaine', 'Heroin', 'Cannabis', 'MDMA', 'LSD', 'Alcohol'];
+
+// --- INITIALIZE ALL QUESTION TYPES ---
+
+// Initialize drag-and-drop (Q1: Multiple Drop Zones)
+(function(){
+  const draggablesArea=document.getElementById('draggables');
+  const dropzones=document.querySelectorAll('.dropzone[data-effect-key]');
+  
+    function loadAll(){ 
+        const s = readStorage();
+        let assignedDrugs = [];
+
+        dropzones.forEach(zone => {
+            const key = zone.dataset.effectKey;
+            const drug = s[key];
+            zone.innerHTML = `<h4>${zone.querySelector('h4').textContent}</h4>`;
+            zone.classList.remove('filled');
+            
+            if (drug) {
+                const el = document.createElement('div');
+                el.className = 'draggable';
+                el.draggable = true;
+                el.textContent = drug;
+                el.addEventListener('dragstart', ev => ev.dataTransfer.setData('text/plain', drug));
+                zone.appendChild(el);
+                assignedDrugs.push(drug);
+                zone.classList.add('filled');
+            }
+        });
+
+        // RE-POPULATE THE DRAGGABLE OPTIONS
+        draggablesArea.innerHTML = '';
+        DRUG_ITEMS.filter(item => !assignedDrugs.includes(item)).forEach(text => {
+            const d = document.createElement('div');
+            d.className = 'draggable';
+            d.draggable = true;
+            d.textContent = text;
+            d.addEventListener('dragstart', ev => ev.dataTransfer.setData('text/plain', text));
+            draggablesArea.appendChild(d);
+        });
+    }
+
+    let s = readStorage();
+    let changed = false;
+    DROPZONE_KEYS.forEach(key => { if (s[key] === undefined) { s[key] = ''; changed = true; } });
+    if (changed) writeStorage(s);
+    loadAll();
+
+    dropzones.forEach(zone => {
+        zone.addEventListener('dragover', ev => ev.preventDefault());
+        zone.addEventListener('drop', ev => {
+            ev.preventDefault(); 
+            const drug = ev.dataTransfer.getData('text/plain'); 
+            const targetKey = zone.dataset.effectKey;
+
+            if (!drug || zone.classList.contains('filled')) return;
+            
+            const s = readStorage();
+            
+            for(const key of DROPZONE_KEYS) { if(s[key] === drug) { s[key] = ''; } }
+
+            s[targetKey] = drug;
+            writeStorage(s); 
+            loadAll();
+        });
+    });
+
+    draggablesArea.addEventListener('dragover', ev => ev.preventDefault());
+    draggablesArea.addEventListener('drop', ev => {
+        ev.preventDefault(); 
+        const drug = ev.dataTransfer.getData('text/plain');
+        if (!drug) return; 
+        const s = readStorage(); 
+        let changed = false;
+
+        for(const key of DROPZONE_KEYS) {
+            if(s[key] === drug) {
+                s[key] = '';
+                changed = true;
+                break;
+            }
+        }
+        
+        if (changed) { writeStorage(s); loadAll(); }
+    });
+})();
+
+// Initialize Interactive Fill-in-the-Blanks (Q2 and Q4) and Text Input (Student Name)
+document.querySelectorAll('input[data-field="student-name"], .fib-blank').forEach(input => {
+    const field = input.dataset.field;
+    if (input.tagName === 'SPAN') { // FIB Blanks
+        if (!input.hasAttribute('contenteditable')) input.setAttribute('contenteditable', 'true');
+        const stored = readStorage()[field];
+        if (stored) input.textContent = stored;
+
+        input.addEventListener('input', () => {
+            let s = readStorage();
+            s[field] = input.textContent.trim();
+            writeStorage(s);
+        });
+    } else { // Student Name Input
+        const stored = readStorage()[field];
+        if (stored) input.value = stored;
+
+        input.addEventListener('input', () => {
+            let s = readStorage();
+            s[field] = input.value.trim();
+            writeStorage(s);
+        });
+    }
+});
+
+
+// Initialize MCQs (Q3, Q5) & True/False (Q7)
+document.querySelectorAll('.mcq, .true-false-options').forEach(qElement=>{
+  const stored=readStorage()[qElement.dataset.question];
+  if(stored){ qElement.querySelectorAll('.option').forEach(opt=>{ if(opt.dataset.value===stored) opt.classList.add('selected');});}
+  
+  qElement.querySelectorAll('.option').forEach(opt=>{ opt.addEventListener('click',()=>{
+    qElement.querySelectorAll('.option').forEach(x=>x.classList.remove('selected')); opt.classList.add('selected');
+    const s=readStorage(); s[qElement.dataset.question]=opt.dataset.value; writeStorage(s);
+  });});
+});
+
+
+// Initialize Checkbox (Q6 and Q9)
+document.querySelectorAll('.checkbox-options').forEach(cbElement => {
+    const questionKey = cbElement.dataset.question;
+    const stored = readStorage()[questionKey] || [];
+    
+    stored.forEach(val => {
+        const option = cbElement.querySelector(`.option[data-value="${val}"]`);
+        if (option) {
+            option.classList.add('selected');
+            option.querySelector('input[type=checkbox]').checked = true;
+        }
+    });
+
+    cbElement.querySelectorAll('.option').forEach(opt => {
+        const checkbox = opt.querySelector('input[type=checkbox]');
+        opt.addEventListener('click', (e) => {
+            // Prevent toggling if the click target is specifically the checkbox, which handles its own state
+            if (e.target.tagName !== 'INPUT') {
+                const isSelected = opt.classList.contains('selected');
+                opt.classList.toggle('selected', !isSelected);
+                checkbox.checked = !isSelected;
+            }
+
+            let s = readStorage();
+            let currentAnswers = s[questionKey] || [];
+            const value = opt.dataset.value;
+
+            if (checkbox.checked) {
+                if (!currentAnswers.includes(value)) currentAnswers.push(value);
+            } else {
+                currentAnswers = currentAnswers.filter(v => v !== value);
+            }
+            s[questionKey] = currentAnswers;
+            writeStorage(s);
+        });
+    });
+});
+
+// Initialize Select/Dropdown (Q8)
+document.querySelectorAll('select[data-field]').forEach(input=>{ 
+  const stored=readStorage()[input.dataset.field]; 
+  if(stored) input.value=stored;
+  input.addEventListener('input',()=>{ let s=readStorage(); s[input.dataset.field]=input.value; writeStorage(s);});
+});
+
+// Questions map for PDF/email
+const questions={
+  'effect-stimulant':'1a) Drag & Drop: Stimulant (Drug Type)', 
+  'effect-depressant':'1b) Drag & Drop: Depressant (Drug Type)',
+  'effect-hallucinogen':'1c) Drag & Drop: Hallucinogen (Drug Type)',
+  'fib-1-blank-1':'2a) FIB: Tolerance/Key Concepts (Answer)', 
+  'fib-2-blank-1':'2b) FIB: Dependence/Key Concepts (Answer)', 
+  'mcq-1':'3) Multiple Choice: Reasons for misuse',
+  'fib-3-blank-1':'4a) FIB: Units in 25ml Spirit (40%) (Answer)', 
+  'fib-4-blank-1':'4b) FIB: Units in 175ml Wine (13%) (Answer)', 
+  'fib-5-blank-1':'4c) FIB: Units in Pint Beer (4%) (Answer)', 
+  'mcq-2':'5) Multiple Choice: Effects of drug misuse', 
+  'cb-2':'6) Checkbox: Environmental Risk Factors', 
+  'tf-1':'7) True or False: Health impacts (Mental Health)', 
+  'dd-1':'8) Dropdown Select: Withdrawal symptoms', 
+  'cb-1':'9) Checkbox: Support agencies', 
+};
+
+
+// PDF Export (IMPROVED FORMATTING)
+document.getElementById('pdfBtn').addEventListener('click',()=>{
+  const {jsPDF}=window.jspdf; 
+  const s=readStorage(); 
+  const doc=new jsPDF(); 
+  const studentName=s['student-name']||'Student';
+  
+    // Header
+  doc.setFontSize(20);
+  doc.setFont('helvetica', 'bold');
+  doc.text('Alcohol & Drug Misuse Activity Report', 14, 20);
+  doc.setFontSize(12);
+  doc.setFont('helvetica', 'normal');
+  doc.text('Student: ' + studentName, 14, 28);
+  
+  let y=38; 
+  const pageWidth=doc.internal.pageSize.getWidth()-28;
+  
+  // Iterate over all questions
+  Object.keys(questions).forEach((k, index)=>{
+        // Check for new page
+        if (y > doc.internal.pageSize.getHeight() - 20) {
+            doc.addPage();
+            y = 20;
+        }
+
+    // 1. Question Title (Bold, larger font)
+    doc.setFontSize(11);
+    doc.setFont('helvetica', 'bold');
+    // Splitting the question title from the bracketed hint
+    const questionTitle = questions[k].split('(')[0].trim();
+    const questionLines=doc.splitTextToSize((index + 1) + ') ' + questionTitle, pageWidth); 
+    doc.text(questionLines, 14, y); 
+    y += questionLines.length * 5 + 2; // Spacing after question title
+
+    // 2. Get Answer/Options
+    doc.setFont('helvetica', 'normal');
+    let rawAnswer = s[k] || 'Not Answered';
+    let options = [];
+
+    // Handle Drag & Drop (Q1), FIB (Q2, Q4), and Dropdown (Q8) - Single Answer Box
+    if(k.startsWith('effect-') || k.startsWith('fib-') || k.startsWith('dd-')) {
+        const answerText = rawAnswer || 'Not Answered'; 
+        doc.setFontSize(10);
+        // Draw a box around the answer
+        doc.setFillColor(240, 240, 240); // Light gray fill
+        doc.rect(14, y - 2, pageWidth, 6, 'F');
+        doc.text('Answer: ' + answerText, 16, y + 2);
+        y += 12;
+
+    // Handle MCQ, True/False, and Checkbox (Q3, Q5, Q6, Q7, Q9) - Options List with Ticks
+    } else if (k.startsWith('mcq-') || k.startsWith('tf-') || k.startsWith('cb-')) {
+        const selector = k.startsWith('mcq-') ? `.mcq[data-question="${k}"]` : k.startsWith('tf-') ? `.true-false-options[data-question="${k}"]` : `.checkbox-options[data-question="${k}"]`;
+        options = getOptions(selector);
+        const selectedValue = k.startsWith('cb-') ? (Array.isArray(rawAnswer) ? rawAnswer : []) : rawAnswer;
+        
+        doc.setFontSize(9);
+        const optionWidth = pageWidth / 2;
+        let startX = 14;
+        let startY = y;
+        let maxY = startY;
+
+        options.forEach((opt, i) => {
+            let isSelected = false;
+            if (Array.isArray(selectedValue)) {
+                isSelected = selectedValue.includes(opt);
+            } else {
+                isSelected = opt === selectedValue;
+            }
+            
+            // USE RELIABLE PDF CHARACTERS for CHECK/UNCHECK
+            const prefix = isSelected ? '⊗ ' : '○ '; // Heavy Ballpoint Cross and Large Circle
+            const lines = doc.splitTextToSize(prefix + opt, optionWidth - 2);
+            
+            let currentX = startX + (i % 2) * optionWidth;
+            let currentY = startY + Math.floor(i / 2) * 6; // Two columns, 6 units per line
+            
+            doc.text(lines, currentX, currentY);
+            maxY = Math.max(maxY, currentY + lines.length * 6);
+        });
+
+        y = maxY + 5;
+    }
+
+    // Final spacing between questions
+    y += 5;
+  });
+  
+  doc.save(studentName.replace(/\s+/g,'_')+'Entry 3 Misuse_Activity.pdf');
+});
+
+// Email Export (Enhanced Ticks/Boxes - remains using Emojis for better visibility in email clients)
+document.getElementById('emailBtn').addEventListener('click',()=>{
+  const s=readStorage(); 
+  const studentName=s['student-name']||'Student'; 
+  let body='';
+  
+  Object.keys(questions).forEach(k=>{ 
+    let answerText = '';
+    const questionTitle = questions[k].split('(')[0].trim();
+    const rawAnswer = s[k] || 'Not Answered';
+    let options = [];
+
+    if(k.startsWith('effect-')) {
+        answerText = rawAnswer;
+    } else if (k.startsWith('fib-') || k.startsWith('dd-')) {
+        answerText = rawAnswer;
+    } else if (k.startsWith('mcq-') || k.startsWith('tf-')) {
+        const selector = k.startsWith('mcq-') ? `.mcq[data-question="${k}"]` : `.true-false-options[data-question="${k}"]`;
+        options = getOptions(selector);
+        
+        const selectedValue = rawAnswer;
+        const formattedOptions = options.map(opt => {
+            const prefix = opt === selectedValue ? '✅' : '⬜';
+            return `${prefix} ${opt}`;
+        }).join('\n'); // Line break for email options
+        
+        answerText = '\n' + formattedOptions;
+    } else if (k.startsWith('cb-')) {
+        const selector = `.checkbox-options[data-question="${k}"]`;
+        options = getOptions(selector);
+        const selectedAnswers = Array.isArray(rawAnswer) ? rawAnswer : [];
+        
+        const formattedOptions = options.map(opt => {
+            const prefix = selectedAnswers.includes(opt) ? '✅' : '⬜';
+            return `${prefix} ${opt}`;
+        }).join('\n'); // Line break for email options
+
+        answerText = '\n' + formattedOptions;
+    }
+
+    body+=`${questionTitle}\nResponse: ${answerText}\n\n`;
+  });
+  
+  const mailtoLink='mailto:teacher@example.com?subject='+encodeURIComponent(studentName+' - Entry 3 Alcohol & Drug Misuse Activity')+'&body='+encodeURIComponent(body);
+  window.location.href=mailtoLink;
+});
+</script>
+</body>
+</html>
